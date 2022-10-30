@@ -38,6 +38,6 @@ public:
                      ans[i][j]=ans[i-1][j-1]+ans[i-1][j];
                     }
             }
-            return ans[i-1];
+            return ans[i-1];               //prints the  particular column
     }
 };
