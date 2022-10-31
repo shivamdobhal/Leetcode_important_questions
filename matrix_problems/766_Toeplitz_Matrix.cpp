@@ -30,7 +30,7 @@ public:
                
                     for(int j=0;j<column-1;j++)
             {
-                    if(matrix[i][j]!=matrix[i+1][j+1])                              //00--11  01---12   02---13  //10--21  11---22   12---23   
+                    if(matrix[i][j]!=matrix[i+1][j+1])                           //comaparing   //00--11  01---12   02---13  //10--21  11---22   12---23   
                             return false;
             }
             }
