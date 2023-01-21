@@ -35,3 +35,36 @@ public:
 METHOD 2---------------------------------------------------------------------------------------------------------------------------------------------------------
 OPTIMISED TIMEC COMPLEXITY=O(N)
   
+class Solution {
+public:
+        int count=0;
+        
+        unordered_map<long int,int> map;
+    int pathSum(TreeNode* root, int targetSum) {
+            long int sum=0;        
+            if(root==NULL)
+                               return 0;
+            helper(root,targetSum,count,sum);        
+            return count;
+    }
+        void helper(TreeNode* root, int target,int &count,long int sum)
+        {
+              
+                if(root==NULL) return;
+      
+                sum=sum+root->val;
+                if(sum==target) count++;
+
+                if(map.find(sum-target)!=map.end())  //if found
+                {
+                        
+                        count =count+ map[sum - target];
+                }
+                     map[sum]++;                 //if  not found
+                        
+                        
+                helper(root->left,target,count,sum);
+                helper(root->right,target,count,sum);
+                map[sum]--;
+        }
+};
