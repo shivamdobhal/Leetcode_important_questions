@@ -1,0 +1,2 @@
+1.FOR FINDING THE Kth Smallest Element in a BST  -----> always use inorder traversal to reduce the time and space complexity as preorder and postorder is not optimum
+2.FOR FINDING THE Kth Largest Element in a BST  -----> always use inorder traversal  in reverse order to reduce the time and space complexity
