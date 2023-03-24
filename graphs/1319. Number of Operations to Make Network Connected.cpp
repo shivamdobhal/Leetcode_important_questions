@@ -1,5 +1,10 @@
 https://youtu.be/VG_TjZ9wWfE?t=813    (aryan mittal)
-to connect n computers minimum n-1 wires are required; 
+
+approach----
+if(   to connect n computers minimum n-1 wires are required )
+  return -1;
+else
+  return component-1;
 ..........................................................................................................................................
   class Solution {
 public:
@@ -17,7 +22,7 @@ public:
            //vis
             vector<int> vis(n,0);
             queue<int> q;
-            int count=0;
+            int count=0;                    //count represent  no of components
             
             for(int i=0;i<n;i++)
             {
