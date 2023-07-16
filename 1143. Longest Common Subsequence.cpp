@@ -155,3 +155,40 @@ public:
        
     }
 };
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////optimiesd dp///////////////////////////////////////////////
+////////////////////tabulation method//////////////////////////////////////////
+class Solution {
+public:
+    int longestCommonSubsequence(string text1, string text2) {
+      int i=text1.size();
+      int j=text2.size();
+        
+      int dp[i+1][j+1];
+        
+        for(int x=0;x<=i;x++)
+        {
+            for(int y=0;y<=j;y++)
+        {
+            if(x==0 || y==0)
+            {
+                dp[x][y]=0;
+            }
+                
+                else if(text1[x-1]==text2[y-1])
+                {
+                    dp[x][y]=1+dp[x-1][y-1];
+                }
+             
+            else{
+                dp[x][y]=max(dp[x-1][y],dp[x][y-1]);
+            }    
+                
+                
+        }
+        }     
+        
+        return dp[i][j];
+    }
+};
+
+
