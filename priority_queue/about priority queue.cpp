@@ -5,4 +5,5 @@ min heap---------use where we have to find  kth max. value /largest value
             
             
 max heap---------use where we have to find  kth min. value /smallest value
+        ---------max element present in base or root 
            syntax=priority_queue<int> pq;
